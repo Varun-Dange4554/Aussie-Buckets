@@ -10,6 +10,7 @@ body{
     height: 98px;
     width: 1520px;
     padding: 0px 10px;
+    /* border-bottom: 1px solid var(--_new_design---border); */
 }
 .topbar,.left,.right{
     display: flex;
@@ -78,8 +79,11 @@ body{
 
 
 
-.back-img{
-    /* margin-top: 150px; */
+
+
+
+.footer{
+    margin-top: 150px;
     background-image: url("https://cdn.prod.website-files.com/66b04d5d579de4c891b7d35c/689187c4a56642e6f2db6f44_footer.webp");
     /* border: 1px solid black; */
     height: 449px;
@@ -90,7 +94,7 @@ body{
 }
 
 .footer_container{
-    height: 448.8px;
+    /* height: 448.8px; */
     width: 1280px;
     padding: 60px 20px 20px;
     grid-column-gap: 60px;
