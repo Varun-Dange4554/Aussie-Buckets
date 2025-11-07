@@ -83,13 +83,38 @@
     flex-flow: column;
     display: flex;
 }
+.sub_div4{
+       flex-flow: column;
+    display: flex;
+    width: 100%;
+}
+.text-size-small2 {
+    color: var(--black);
+    font-weight: 600;
+ font-size: 1rem;
+    /* border: 1px solid black; */
+
+ 
+  }
 .sub_div3{
    justify-content: space-between;
     /* align-items: center; */
     display: flex;    
     padding-bottom: 15px;
+
+
 }
 .text_block{
     color: #333;
-    font-size: 14px;
+    font-size: 16px;
+    
+
 }
+
+.text-size-small1{
+    color: var(--grey);
+    font-size: .875rem;
+    text-decoration: none;
+    
+}
+

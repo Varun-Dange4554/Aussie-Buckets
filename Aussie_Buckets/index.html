@@ -8,136 +8,87 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
     <link rel="stylesheet" href="../Aussie_Buckets/style.css">
+    <link rel="stylesheet" href="../Aussie_Buckets/Attachments_Hover.css">
 </head>
 <body>
-    <section class="header">
-        <div class="nav1">
-        <div class="topbar">
-            <div class="left">
-                <div>Head Office:607 Bourke Street, Melbourne VIC 3000</div>
-                <div>  | </div>
-                <div>Warehouse:4/181 Proximity Drive, Sunshine West, VIC 3020</div>
-            </div>
-            <div class="right">
-                <div>Phone:(03) 9917 8598</div>
-                <div>|</div>
-                <div>Hours:Mon-Fri, 7:30am-6pm</div>
-            </div>
-        </div>
-        </div>
-        <hr>
+    <section class="header"></section>
+    <section class="footer">   </section>            
+    <div class="navbar_dropdown_list"></div>
 
-        <!-- main navbar -->
-            <div class="nav2">
-        <div class="navbar">
-            <div class="nav_img1">
-            <img src="../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg"  alt="Aussie Buckets logo">
-            </div>
-            <div class="anchor">
-            <a href="#" >Attachments </a>
-            <a href="#">Wear Parts</a>
-            <a href="#">Our Company</a>
-            <a href="#">Mining</a>
-            <a href="#">Finance</a>
-            <a href="#">Contact</a>
-            </div>
-            <div class="Quick_box">
-                <button>Quick Quote </button>
-            <div class="nav_img2">
-                <img src="../Aussie_Buckets/Utils/Navbar_img/download.png" alt="">
-            </div>
-            </div>
-        </div>
-        </div>
-        
-        <hr>
-    </section>
 
-    <section class="footer">
-            <div class="footer_container">
-                <div class="footer_grid">
-                    <div class="div_block1">
-                        <div class="footer_logo">
-                            <img src="../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg" alt="Aussie Buckets company logo">
-                        </div>
-                        <div class="footer_about">
-                            <p>The words Aussie Buckets and its associated logo have registered trademarks within Australia. Use of this site is subject to our Website Terms of Use which are available here</p>
-                            <br>
-                          
-                            <p>The photo's used on our website display various tonnages and are indicative only - to confirm all wear and design elements please discuss your needs with an attachment specialist first. Final design and wear elements may vary across various tonnages.
-                        </div>
-                    </div>
-                <div class="div_block2"></div>
-                 <div class="div_blocks">
-                  <div class="div_block3">
-                    <div class="sub_div">
-                        <p>Products</p>
-                        <br>
-                    </div>
-                    <div class="div_block4">
-                        <a href="#">Buckets</a>
-                        <a href="#">Grabs</a>
-                        <a href="#">Attachments</a>
-                        <a href="#">Hitches</a>
-                        <a href="#">Rock Breekrs</a>
-                        <a href="#">Mining</a>
-                        <a href="#">Performance</a>
-                        <a href="#">Wear Parts</a>
-                        <a href="#">Sale</a>
-                    </div>
-                  </div>
-                  <div class="div_block3">
-                    <div class="sub_div">
-                        <p>Socials</p>
-                        <br>
-                    </div>
-                    <div class="div_block4">
-                        <a href="#">Facebook</a>
-                        <a href="#">You Tube</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">Linkedin</a>
-                        <a href="#">Tik Tok</a>
-                    </div>
-                  </div>
-                  <div class="div_block3">
-                    <div class="sub_div">
-                        <p>Company</p>
-                        <br>
-                    </div>
-                    <div class="div_block4">
-                        <a href="#">About</a>
-                        <a href="#">Service</a>
-                        <a href="#">Manufacturing</a>
-                        <a href="#">Testimonials</a>
-                        <a href="#">Legal</a>
-                        <a href="#">Blog</a>
-                    </div>
-                  </div>
-                  <div class="div_block3">
-                    <div class="sub_div">
-                        <p>Help</p>
-                        <br>
-                    </div>
-                    <div class="div_block4">
-                        <a href="#">Contact</a>
-                        <a href="#">Finance</a>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-                <div class="div_block5">
-                    <div class="small_copy">
-                    <p>Aussie Buckets Pty Ltd © 2025 All Rights Reserved | 607 Bourke Street, Melbourne VIC 3000, Australia</p>
-                    </div>
-                  </div>
-            </div>
-        <!-- </div> -->
-    </section>
+   
+  
 
+<script type="module">
+  import { NavCom } from "./Components/Navbar.js";
+  import {FooterCom} from "./Components/Footer.js";
+  import{ AttachmentsCom} from "./Components/Attachments_Hover.js";
+  
+
+  //Navbar
+  document.querySelector(".header").innerHTML = NavCom(
+    "../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg",
+    "../Aussie_Buckets/Utils/Navbar_img/download.png"
+  );
+  // Footer 
+  document.querySelector(".footer").innerHTML =  FooterCom(
+    "../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg"
+  );
     
+//   Attachments hover
+  document.querySelector(".navbar_dropdown_list").innerHTML = AttachmentsCom(
+    "../Aussie_Buckets/Utils/Navbar_img/66b45e6970d801a07e1e554f_Rock Bucket.png",
+    "../Aussie_Buckets/Utils/Navbar_img/681c2da33d2d2737e9ef700f_0_feature.webp",
+    "../Aussie_Buckets/Utils/Navbar_img/67fde3ca59edc39ee3216697_1.webp",
+    "../Aussie_Buckets/Utils/Navbar_img/67ef790c9e995d6ee2c1cebf_tillt_rotator_nav_02.webp",
+    "../Aussie_Buckets/Utils/Navbar_img/67eb6b91a1d5739ffa1d1199_1_Daemo_smart_breaker_series_SME.png",
+    "../Aussie_Buckets/Utils/Navbar_img/66c41153cb48e161387426d3_Multisystem.png"
+  );
+
+
+  
+setTimeout(() => {
+      const dropdown = document.querySelector(".navbar_dropdown_list");
+      const trigger = document.querySelector(".Attachments");
+
+      if (dropdown && trigger) {
+        // Show dropdown
+        trigger.addEventListener("mouseenter", () => {
+          dropdown.style.display = "block";
+          setTimeout(() => (dropdown.style.opacity = "1"), 10);
+        });
+
+        // Keep open when hovering over dropdown
+        dropdown.addEventListener("mouseenter", () => {
+          dropdown.style.display = "block";
+          dropdown.style.opacity = "1";
+        });
+
+        // Hide dropdown on leave
+        trigger.addEventListener("mouseleave", () => {
+          dropdown.style.opacity = "0";
+          setTimeout(() => {
+            if (!dropdown.matches(":hover")) dropdown.style.display = "none";
+          }, 300);
+        });
+
+        dropdown.addEventListener("mouseleave", () => {
+          dropdown.style.opacity = "0";
+          setTimeout(() => (dropdown.style.display = "none"), 300);
+        });
+      } else {
+        console.warn("⚠️ Attachments trigger or dropdown not found!");
+      }
+    }, 500);
+ 
 
 
 
 
+
+</script> 
+<!-- <script src="./script.js"></script> -->
+ 
+    
 </body>
 </html>

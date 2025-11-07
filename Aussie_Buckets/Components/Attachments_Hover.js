@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="../Aussie_Buckets/Attachments_Hover.css">
-</head>
-<body>
-    <div class="navbar_dropdown_list">
+export const AttachmentsCom= (img1,img2,img3,img4,img5,img6)=>{
+    return`
+         <div class="navbar_dropdown_list">
         <div class="container-large">
             <div class="flyout-menu">
                 <div class="grid">
                     <a href="#"> 
                         <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/66b45e6970d801a07e1e554f_Rock Bucket.png" alt="">
+                            <img  height="100" width="100"   src="${img1}" alt="">
                                 <small >FOR 1T - 400T+</small>
                             <div class="sub_div2">
                                 <h2>Excavator Buckets</h2>
@@ -26,7 +19,7 @@
                     </a>
                     <a href="#"> 
                     <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/681c2da33d2d2737e9ef700f_0_feature.webp" alt="">
+                            <img  height="100" width="100"   src="${img2}" alt="">
                                 <small >FOR 1T - 400T+</small>
                             <div class="sub_div2">
                                 <h2>Excavator Grabs</h2>
@@ -39,7 +32,7 @@
                     </a>
                     <a href="#"> 
                     <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/67fde3ca59edc39ee3216697_1.webp" alt="">
+                            <img  height="100" width="100"   src="${img3}" alt="">
                                 <small >FOR 1T - 400T+</small>
                             <div class="sub_div2">
                                 <h2>Excavator Attachments</h2>
@@ -53,7 +46,7 @@
                     </a>
                     <a href="#"> 
                     <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/67ef790c9e995d6ee2c1cebf_tillt_rotator_nav_02.webp" alt="">
+                            <img  height="100" width="100"   src="${img4}" alt="">
                                 <small >FOR 1T - 400T+</small>
                             <div class="sub_div2">
                                 <h2>Excavator Hitches</h2>
@@ -67,7 +60,7 @@
                     </a>
                     <a href="#"> 
                     <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/67eb6b91a1d5739ffa1d1199_1_Daemo_smart_breaker_series_SME.png" alt="">
+                            <img  height="100" width="100"   src="${img5}" alt="">
                                 <small >FOR 1T - 125T+</small>
                             <div class="sub_div2">
                                 <h2>Excavator</h2>
@@ -81,7 +74,7 @@
                     </a>
                     <a href="#"> 
                     <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/66c41153cb48e161387426d3_Multisystem.png" alt="">
+                            <img  height="100" width="100"   src="${img6}" alt="">
                                 <small >FOR 1T - 400T+</small>
                             <div class="sub_div2">
                                 <h2>Performance Range</h2>
@@ -101,5 +94,5 @@
         </div>
 
     </div>
-</body>
-</html>
+
+    `}
