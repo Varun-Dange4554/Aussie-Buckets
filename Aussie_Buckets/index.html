@@ -1,94 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aussie Buckets</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-    <link rel="stylesheet" href="../Aussie_Buckets/style.css">
-    <link rel="stylesheet" href="../Aussie_Buckets/Attachments_Hover.css">
-</head>
-<body>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Aussie_Buckets/style.css" />
+    <link
+      rel="stylesheet"
+      href="../Aussie_Buckets/CSS/Attachments_dropdown.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../Aussie_Buckets/CSS/Wear_Parts_dropdown.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../Aussie_Buckets/CSS/Our_Company_dropdown.css"
+    />
+  </head>
+  <body>
     <section class="header"></section>
-    <section class="footer">   </section>            
-    <div class="navbar_dropdown_list"></div>
+    <div class="navbar_dropdown_list1"></div>
+    <div class="navbar_dropdown_list2"></div>
+    <div class="navbar_dropdown_list3"></div>
+    <section class="footer"></section>
 
+    <script type="module">
+      import { NavCom } from "./Components/Navbar.js";
+      import { AttachmentsCom } from "./Components/Attachments_dropdown.js";
+      import { WearCom } from "./Components/Wear_parts_dropdown.js";
+      import { CompanyCom } from "./Components/Our_Company_dropdown.js";
+      import { FooterCom } from "./Components/Footer.js";
 
-   
-  
+      //Navbar
+      document.querySelector(".header").innerHTML = NavCom(
+        "../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg",
+        "../Aussie_Buckets/Utils/Navbar_img/download.png"
+      );
+      // Footer
+      document.querySelector(".footer").innerHTML = FooterCom(
+        "../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg"
+      );
 
-<script type="module">
-  import { NavCom } from "./Components/Navbar.js";
-  import {FooterCom} from "./Components/Footer.js";
-  import{ AttachmentsCom} from "./Components/Attachments_Hover.js";
-  
+      //   Attachments hover
+      document.querySelector(".navbar_dropdown_list1").innerHTML =
+        AttachmentsCom(
+          "../Aussie_Buckets/Utils/Navbar_img/66b45e6970d801a07e1e554f_Rock Bucket.png",
+          "../Aussie_Buckets/Utils/Navbar_img/681c2da33d2d2737e9ef700f_0_feature.webp",
+          "../Aussie_Buckets/Utils/Navbar_img/67fde3ca59edc39ee3216697_1.webp",
+          "../Aussie_Buckets/Utils/Navbar_img/67ef790c9e995d6ee2c1cebf_tillt_rotator_nav_02.webp",
+          "../Aussie_Buckets/Utils/Navbar_img/67eb6b91a1d5739ffa1d1199_1_Daemo_smart_breaker_series_SME.png",
+          "../Aussie_Buckets/Utils/Navbar_img/66c41153cb48e161387426d3_Multisystem.png"
+        );
 
-  //Navbar
-  document.querySelector(".header").innerHTML = NavCom(
-    "../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg",
-    "../Aussie_Buckets/Utils/Navbar_img/download.png"
-  );
-  // Footer 
-  document.querySelector(".footer").innerHTML =  FooterCom(
-    "../Aussie_Buckets/Utils/Navbar_img/68917553c998217dbf60a490_ab_logo_gray.svg"
-  );
-    
-//   Attachments hover
-  document.querySelector(".navbar_dropdown_list").innerHTML = AttachmentsCom(
-    "../Aussie_Buckets/Utils/Navbar_img/66b45e6970d801a07e1e554f_Rock Bucket.png",
-    "../Aussie_Buckets/Utils/Navbar_img/681c2da33d2d2737e9ef700f_0_feature.webp",
-    "../Aussie_Buckets/Utils/Navbar_img/67fde3ca59edc39ee3216697_1.webp",
-    "../Aussie_Buckets/Utils/Navbar_img/67ef790c9e995d6ee2c1cebf_tillt_rotator_nav_02.webp",
-    "../Aussie_Buckets/Utils/Navbar_img/67eb6b91a1d5739ffa1d1199_1_Daemo_smart_breaker_series_SME.png",
-    "../Aussie_Buckets/Utils/Navbar_img/66c41153cb48e161387426d3_Multisystem.png"
-  );
+      // Show Attachments dropdown on hover
+      const attachmentsLink = document.querySelector(".Attachments");
+      const dropdown1 = document.querySelector(".navbar_dropdown_list1");
 
-
-  
-setTimeout(() => {
-      const dropdown = document.querySelector(".navbar_dropdown_list");
-      const trigger = document.querySelector(".Attachments");
-
-      if (dropdown && trigger) {
-        // Show dropdown
-        trigger.addEventListener("mouseenter", () => {
-          dropdown.style.display = "block";
-          setTimeout(() => (dropdown.style.opacity = "1"), 10);
+      // Safety check to ensure both exist
+      if (attachmentsLink && dropdown1) {
+        // Show dropdown on hover
+        attachmentsLink.addEventListener("mouseenter", () => {
+          dropdown1.style.display = "block";
+          dropdown1.style.opacity = "1";
         });
 
-        // Keep open when hovering over dropdown
-        dropdown.addEventListener("mouseenter", () => {
-          dropdown.style.display = "block";
-          dropdown.style.opacity = "1";
-        });
-
-        // Hide dropdown on leave
-        trigger.addEventListener("mouseleave", () => {
-          dropdown.style.opacity = "0";
+        // Hide when mouse leaves both link & dropdown
+        attachmentsLink.addEventListener("mouseleave", () => {
           setTimeout(() => {
-            if (!dropdown.matches(":hover")) dropdown.style.display = "none";
-          }, 300);
+            if (!dropdown1.matches(":hover")) {
+              dropdown1.style.display = "none";
+              dropdown1.style.opacity = "0";
+            }
+          }, 200);
         });
 
-        dropdown.addEventListener("mouseleave", () => {
-          dropdown.style.opacity = "0";
-          setTimeout(() => (dropdown.style.display = "none"), 300);
+        dropdown1.addEventListener("mouseleave", () => {
+          dropdown1.style.display = "none";
+          dropdown1.style.opacity = "0";
         });
-      } else {
-        console.warn("⚠️ Attachments trigger or dropdown not found!");
+
+        dropdown1.addEventListener("mouseenter", () => {
+          dropdown1.style.display = "block";
+          dropdown1.style.opacity = "1";
+        });
       }
-    }, 500);
- 
+
+      // Wear_parts
+
+      document.querySelector(".navbar_dropdown_list2").innerHTML = WearCom(
+        "../Aussie_Buckets/Utils/Navbar_img/68be3f6747ddddd365b4a21f_0_featured_image_crex.webp",
+        "../Aussie_Buckets/Utils/Navbar_img/68be3f67fd50cafcc14f9951_0_featured_image_protect.webp",
+        "../Aussie_Buckets/Utils/Navbar_img/68be3f67924c1f3a2bff034a_0_featured_image_promite.webp"
+      );
+
+      // Show Wear dropdown on hover
+        const WearLink = document.querySelector(".Wear")
+        const dropdown2 = document.querySelector(".navbar_dropdown_list2");
+
+        // sefety check to ensure both exist 
+        if(WearLink && dropdown2){
+          // show dropdown on hover 
+          WearLink.addEventListener("mouseenter",()=>{;
+          dropdown2.style.display="block";
+          dropdown2.style.opacity="1";
+        });
+
+        // hide when mouse leaves both link & dropdown
+        WearLink.addEventListener("mouseleave",()=>{
+          setTimeout(()=>{
+            if(!dropdown2.matches(":hover")){
+              dropdown2.style.display="none";
+              dropdown2.style.opacity="0";
+            }
+          },200);
+        });
+        dropdown2.addEventListener("mouseenter",()=>{
+          dropdown2.style.display="none";
+          dropdown2.style.opacity="0";
+        });
+        dropdown2.addEventListener("mouseenter",()=>{
+          dropdown2.style.display="block";
+          dropdown2.style.opacity="1";
+        })
+      }
 
 
-
-
-
-</script> 
-<!-- <script src="./script.js"></script> -->
- 
-    
-</body>
+      // Our Company Hover
+      document.querySelector(".navbar_dropdown_list3").innerHTML = CompanyCom();
+      // show Our Company
+    </script>
+  </body>
 </html>

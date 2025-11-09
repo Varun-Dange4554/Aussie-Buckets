@@ -25,11 +25,11 @@ export const NavCom = (logo1,logo2) => {
             </div>
             <div class="anchor">
             <a href="#" class="Attachments" >Attachments </a>
-            <a href="#">Wear Parts</a>
-            <a href="#">Our Company</a>
-            <a href="#">Mining</a>
-            <a href="#">Finance</a>
-            <a href="#">Contact</a>
+            <a href="#"  class="Wear_Parts">Wear Parts</a>
+            <a href="#"  class="Our_Company">Our Company</a>
+            <a href="#" class="Mining">Mining</a>
+            <a href="#"  class="Finance">Finance</a>
+            <a href="#"   class="Contact">Contact</a>
             </div>
             <div class="Quick_box">
                 <button>Quick Quote </button>

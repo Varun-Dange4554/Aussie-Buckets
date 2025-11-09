@@ -1,10 +1,10 @@
 export const AttachmentsCom= (img1,img2,img3,img4,img5,img6)=>{
     return`
-         <div class="navbar_dropdown_list">
+         <div class="navbar_dropdown_list1">
         <div class="container-large">
             <div class="flyout-menu">
                 <div class="grid">
-                    <a href="#"> 
+                    <a href="#">
                         <div class="sub_div1">
                             <img  height="100" width="100"   src="${img1}" alt="">
                                 <small >FOR 1T - 400T+</small>
@@ -94,5 +94,7 @@ export const AttachmentsCom= (img1,img2,img3,img4,img5,img6)=>{
         </div>
 
     </div>
-
-    `}
+    </section>
+ 
+`
+}

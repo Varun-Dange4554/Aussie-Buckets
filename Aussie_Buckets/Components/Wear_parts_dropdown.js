@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wear Parts</title>
-    <link rel="stylesheet" href="../Aussie_Buckets/Wear_Parts.css">
-</head>
-<body>
-     <div class="navbar_dropdown_list">
+export const WearCom = (img1,img2,img3)=>{
+    return`
+     <div class="navbar_dropdown_list2">
         <div class="container-large">
             <div class="flyout-menu">
                 <div class="grid">
                     <a href="#"> 
                         <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/68be3f6747ddddd365b4a21f_0_featured_image_crex.webp" alt="">
+                            <img  height="100" width="100"   src="${img1}" alt="">
                             <div class="sub_div2">
                                 <p class="text-size-small1">Next-Gen G.E.T </p>
                                 <div class="sub_div4">
@@ -25,33 +18,24 @@
                             </div>
                         </div>
                     </a>
-
-
-
                      <a href="#"> 
                         <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/68be3f67fd50cafcc14f9951_0_featured_image_protect.webp" alt="">
+                            <img  height="100" width="100"   src="${img2}" alt="">
                             <div class="sub_div2">
                                  <p class="text-size-small2">Combi ProTect</p>
                                 <div class="sub_div4">
                                 <p class="text-size-small1">Ultra-Durable Wear Protection. </p>
 
-                            
-                                </div>
+                            </div>
                             </div>
                             <div class="sub_div3">
                                 <div class="text_block">See all</div>
                             </div>
                         </div>
                     </a>
-   
-
-
-
-
                     <a href="#"> 
                         <div class="sub_div1">
-                            <img  height="100" width="100"   src="../Aussie_Buckets/Utils/Navbar_img/68be3f67924c1f3a2bff034a_0_featured_image_promite.webp" alt="">
+                            <img  height="100" width="100"   src="${img3}" alt="">
                             <div class="sub_div2">
                                  <p class="text-size-small2">Combi ProMite</p>
                                 
@@ -64,6 +48,10 @@
                             </div>
                         </div>
                     </a>
-   
-</body>
-</html>
+                    </div>
+                </div>
+          </div>
+       </div>
+
+    `
+}

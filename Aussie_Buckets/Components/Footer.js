@@ -1,6 +1,5 @@
 export const FooterCom= (logo)=>{
-    return`
-    <section class="footer">
+    return` <section class="footer">
             <div class="footer_container">
                 <div class="footer_grid">
                     <div class="div_block1">
@@ -78,7 +77,9 @@ export const FooterCom= (logo)=>{
                     </div>
                   </div>
             </div>
+            
        
     </section>
+
     `
 }
